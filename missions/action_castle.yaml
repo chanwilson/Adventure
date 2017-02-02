@@ -1,0 +1,55 @@
+# -*- yaml -*-
+--- 
+name: Action Castle
+locations:
+  Cottage:
+      name: Cottage
+      items:
+        - fishing pole
+      exits:
+        out: Garden Path
+      initial description: You are standing in a small cottage.  There is a fishing pole here.
+      description: You are standing in a small cottage
+  Garden Path:
+      name: Garden Path
+      items:
+        - rosebush
+      exits:
+        north: Winding Path
+        south: Fishing Pond
+        in: Cottage
+      initial description: You are standing on a lush garden path. There is a rosebush here.  There is a cottage here.
+      description: You are standing on a lush garden path.  There is a cottage here.
+      actions:
+        take|pick: rosebush
+      items:
+        rose: 1
+  Fishing Pond:
+  Winding Path:
+  Top of the Tall Tree:
+  Drawbridge:
+  Courtyard:
+  Tower Stairs:
+  Tower:
+  Dungeon Stairs:
+  Dungion:
+  Great Feasting Hall:
+  Throne Room:
+  
+#
+# ---------- Player
+player:
+    inventory: []
+    startlocation: Cottage
+score: 0
+ # ----------- game over
+game over:
+  troll too long: The troll tires of your indecision and skewers you for dinner.
+  troll attack:  The troll easily defends against your puny attack and hacks you into pieces for dinner
+# ----------- items
+items:
+  rose:
+    name: A beautiful fragrant red rose
+    actions:
+      examine: A quite stunning red rose
+      smell: The rose smells quite good
